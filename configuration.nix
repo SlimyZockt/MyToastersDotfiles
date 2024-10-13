@@ -121,7 +121,6 @@ in {
         zig
         gnumake
         cargo
-        vscode
         air
         nil
       ];
