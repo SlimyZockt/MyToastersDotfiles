@@ -125,6 +125,9 @@ in {
         nil
         vscode
         libuchardet
+        typescript
+        webcord
+        obs-studio
       ];
   };
 
@@ -192,7 +195,8 @@ in {
     ripgrep
     nixd
     lf
-    typescript
+    fastfetch
+
   ];
 
   # ADD FONTS
@@ -224,6 +228,12 @@ in {
     enable = true;
   };
 
+  environment.sessionVariables = {
+    PATH = [ 
+      "$HOME/Dokumente/CodeStuff/DotTools/DotTools"
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -236,7 +246,7 @@ in {
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 30d";
+    options = "--delete-older-than 7d";
   };
 
 }
