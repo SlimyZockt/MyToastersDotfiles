@@ -123,6 +123,8 @@ in {
         cargo
         air
         nil
+        vscode
+        libuchardet
       ];
   };
 
