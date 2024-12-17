@@ -24,7 +24,7 @@ in {
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  hardware.openrazer.enable = true;
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -47,24 +47,23 @@ in {
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
-   # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
+   # Enable the KDE Plasma Desktop Environment.
 
   xdg = {
     autostart.enable = true;
     portal = {
       enable = true;
       extraPortals = [
-        pkgs.xdg-desktop-portal
-        pkgs.xdg-desktop-portal-gtk
+        # pkgs.xdg-desktop-portal
+        # pkgs.xdg-desktop-portal-gtk
         pkgs.xdg-desktop-portal-hyprland
       ];
     };
   };
 
   nix.settings.experimental-features = "nix-command flakes";
-  # services.desktopManager.plasma6.enable = true;
 
   qt = {
     enable = true;
@@ -103,12 +102,13 @@ in {
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
+  
+  services.ratbagd.enable = true;
  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.myt = {
     isNormalUser = true;
     description = "My Toaster";
-    extraGroups = [ "networkmanager" "wheel" "video"];
+    extraGroups = [ "networkmanager" "wheel" "video" "openrazer" "ratbagd"];
       packages = with pkgs; [
         localsend
         tmux
@@ -126,14 +126,14 @@ in {
         vscode
         libuchardet
         typescript
-        webcord
+        discord
         obs-studio
       ];
   };
 
   # Install firefox.
   # programs.firefox.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -169,10 +169,11 @@ in {
     lxqt.lxqt-policykit
     brave
     xdg-desktop-portal
-    xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     vim
+    piper
     # libnotify
+    adwaita-icon-theme 
     alacritty
     wget
     dunst
@@ -183,6 +184,7 @@ in {
     slurp
     networkmanagerapplet
     grim
+    polychromatic
     mako
     adapta-kde-theme
     adwaita-qt6
@@ -195,9 +197,12 @@ in {
     ripgrep
     nixd
     lf
+    wezterm
     fastfetch
 
   ];
+  
+  environment.localBinInPath = true;
 
   # ADD FONTS
   fonts.packages = with pkgs; [
@@ -229,7 +234,7 @@ in {
   };
 
   environment.sessionVariables = {
-    PATH = [ 
+    "$PATH" = [ 
       "$HOME/Dokumente/CodeStuff/DotTools/DotTools"
     ];
   };
@@ -240,7 +245,7 @@ in {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
   # Use GC
   nix.gc = {
