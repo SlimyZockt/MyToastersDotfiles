@@ -180,7 +180,6 @@ in {
     piper
     pavucontrol
     adwaita-icon-theme 
-    alacritty
     wget
     clipboard-jh
     dunst
@@ -210,6 +209,7 @@ in {
     aseprite
     godot_4
     unstable.wezterm
+    dracula-icon-theme
     fastfetch
     nwg-look
     libsForQt5.qt5ct
