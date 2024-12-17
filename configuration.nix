@@ -227,8 +227,9 @@ in {
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  # security.polkit.enable = true;
-
+  security.polkit.enable = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+  boot.kernelModules = [ "v4l2loopback" ];
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ 53317 ];
   # networking.firewall.allowedUDPPorts = [ 53317 ];
