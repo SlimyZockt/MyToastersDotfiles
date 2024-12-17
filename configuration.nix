@@ -181,6 +181,8 @@ in {
     hyprpolkitagent
     swww
     slurp
+    waypaper
+    mpvpaper
     networkmanagerapplet
     grim
     polychromatic
