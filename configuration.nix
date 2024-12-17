@@ -117,6 +117,7 @@ in {
         gopls
         typescript
         libgcc
+        pamixer
         zig
         gnumake
         cargo
@@ -170,14 +171,13 @@ in {
     xdg-desktop-portal-hyprland
     vim
     piper
-    # libnotify
+    pavucontrol
     adwaita-icon-theme 
     alacritty
     wget
     clipboard-jh
     dunst
     waybar
-    iwgtk
     hyprpolkitagent
     swww
     slurp
@@ -191,10 +191,12 @@ in {
     wl-clipboard
     networkmanagerapplet
     blueberry
+    fuse
     udiskie
     rofi-wayland
     starship
     unzip
+    hyprpicker
     ripgrep
     nixd
     lf
