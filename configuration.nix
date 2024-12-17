@@ -139,8 +139,10 @@ in {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM  = true;
   };
-  programs.git= {
+
+programs.git= {
     enable = true;
     package = pkgs.gitFull;
   };
