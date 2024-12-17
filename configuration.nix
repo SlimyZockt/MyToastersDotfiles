@@ -162,7 +162,12 @@ in {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     unstable.neovim
@@ -181,7 +186,6 @@ in {
     hyprpolkitagent
     swww
     slurp
-    waypaper
     mpvpaper
     networkmanagerapplet
     grim
@@ -190,10 +194,8 @@ in {
     adapta-kde-theme
     adwaita-qt6
     xorg.xcursorthemes
-    wl-clipboard
     networkmanagerapplet
     blueberry
-    fuse
     udiskie
     rofi-wayland
     starship
