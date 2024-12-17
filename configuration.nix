@@ -184,6 +184,7 @@ programs.git= {
     adwaita-icon-theme 
     wget
     clipboard-jh
+    hyprpicker
     dunst
     waybar
     hyprpolkitagent
