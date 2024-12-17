@@ -99,15 +99,16 @@ in {
     #media-session.enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-  
   services.ratbagd.enable = true;
  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.myt = {
     isNormalUser = true;
     description = "My Toaster";
-    extraGroups = [ "networkmanager" "wheel" "video" "openrazer" "ratbagd"];
+    extraGroups = [ "networkmanager" "wheel" "video" "openrazer" "ratbagd" "docker"];
       packages = with pkgs; [
         localsend
         tmux
@@ -128,6 +129,7 @@ in {
         typescript
         discord
         obs-studio
+        tailwindcss
       ];
   };
 
