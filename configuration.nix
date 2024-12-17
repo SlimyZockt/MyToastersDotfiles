@@ -14,7 +14,6 @@ in {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -166,7 +165,6 @@ in {
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     unstable.neovim
-    lxqt.lxqt-policykit
     brave
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
@@ -176,10 +174,11 @@ in {
     adwaita-icon-theme 
     alacritty
     wget
+    clipboard-jh
     dunst
     waybar
     iwgtk
-    lxqt.lxqt-policykit
+    hyprpolkitagent
     swww
     slurp
     networkmanagerapplet
@@ -189,17 +188,24 @@ in {
     adapta-kde-theme
     adwaita-qt6
     xorg.xcursorthemes
-    polkit_gnome
     wl-clipboard
+    networkmanagerapplet
+    blueberry
+    udiskie
     rofi-wayland
     starship
     unzip
     ripgrep
     nixd
     lf
-    wezterm
+    aseprite
+    godot_4
+    unstable.wezterm
     fastfetch
-
+    nwg-look
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+    kdePackages.xwaylandvideobridge
   ];
   
   environment.localBinInPath = true;
@@ -233,11 +239,7 @@ in {
     enable = true;
   };
 
-  environment.sessionVariables = {
-    "$PATH" = [ 
-      "$HOME/Dokumente/CodeStuff/DotTools/DotTools"
-    ];
-  };
+  environment.sessionVariables = {};
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
