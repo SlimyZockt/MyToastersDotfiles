@@ -9,7 +9,43 @@ in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
+
+  users.users.eve.isNormalUser = true;
+  home-manager.users.eve = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+
+    gtk = {
+      enable = true;
+      font.name = "TeX Gyre Adventor 10";
+      theme = {
+        name = "Juno";
+        package = pkgs.juno-theme;
+      };
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+
+      gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+      gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+    
+  };
+
+    # The state version is required and should stay at the version you
+    # originally installed.
+    home.stateVersion = "24.11";
+};
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -139,7 +175,6 @@ in {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    withUWSM  = true;
   };
 
 programs.git= {
@@ -186,6 +221,7 @@ programs.git= {
     clipboard-jh
     hyprpicker
     dunst
+    yaru-theme
     waybar
     hyprpolkitagent
     swww
@@ -208,6 +244,7 @@ programs.git= {
     hyprpicker
     ripgrep
     nixd
+    lxappearance
     lf
     aseprite
     godot_4
