@@ -132,6 +132,7 @@ in {
         obs-studio
         tailwindcss
         templ
+        pnpm
       ];
   };
 
