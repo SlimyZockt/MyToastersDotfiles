@@ -133,6 +133,8 @@ in {
         tailwindcss
         templ
         pnpm
+        sqlite
+        goose
       ];
   };
 
@@ -224,7 +226,6 @@ programs.git= {
     wl-clipboard
     spotify
     nixfmt-rfc-style
-    goose
   ];
   
   environment.localBinInPath = true;
