@@ -12,41 +12,6 @@ in {
       <home-manager/nixos>
     ];
 
-  users.users.eve.isNormalUser = true;
-  home-manager.users.eve = { pkgs, ... }: {
-    home.packages = [ pkgs.atool pkgs.httpie ];
-
-    gtk = {
-      enable = true;
-      font.name = "TeX Gyre Adventor 10";
-      theme = {
-        name = "Juno";
-        package = pkgs.juno-theme;
-      };
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
-      };
-
-      gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-
-      gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-    
-  };
-
-    # The state version is required and should stay at the version you
-    # originally installed.
-    home.stateVersion = "24.11";
-};
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -255,6 +220,7 @@ programs.git= {
     libsForQt5.qt5ct
     kdePackages.qt6ct
     kdePackages.xwaylandvideobridge
+    wl-clipboard
   ];
   
   environment.localBinInPath = true;
