@@ -4,13 +4,18 @@
 
 { config, pkgs, ... }:
 let
-    unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      <home-manager/nixos>
-    ];
+  unstable = import <nixos-unstable> {
+    config = {
+      allowUnfree = true;
+    };
+  };
+in
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    <home-manager/nixos>
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -49,7 +54,7 @@ in {
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-   # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment.
 
   xdg = {
     autostart.enable = true;
@@ -70,7 +75,6 @@ in {
     platformTheme = "gnome";
     style = "adwaita-dark";
   };
-
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -105,37 +109,44 @@ in {
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
   services.ratbagd.enable = true;
- # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.myt = {
     isNormalUser = true;
     description = "My Toaster";
-    extraGroups = [ "networkmanager" "wheel" "video" "openrazer" "ratbagd" "docker"];
-      packages = with pkgs; [
-        localsend
-        tmux
-        gcc
-        nodejs_20
-        go
-        gopls
-        typescript
-        libgcc
-        pamixer
-        zig
-        gnumake
-        cargo
-        air
-        nil
-        vscode
-        libuchardet
-        typescript
-        discord
-        obs-studio
-        tailwindcss
-        templ
-        pnpm
-        sqlite
-        goose
-      ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "openrazer"
+      "ratbagd"
+      "docker"
+    ];
+    packages = with pkgs; [
+      localsend
+      tmux
+      gcc
+      nodejs_20
+      go
+      gopls
+      typescript
+      libgcc
+      pamixer
+      zig
+      gnumake
+      cargo
+      air
+      nil
+      vscode
+      libuchardet
+      typescript
+      discord
+      obs-studio
+      tailwindcss
+      templ
+      pnpm
+      sqlite
+      goose
+    ];
   };
 
   # Install firefox.
@@ -146,7 +157,7 @@ in {
     xwayland.enable = true;
   };
 
-programs.git= {
+  programs.git = {
     enable = true;
     package = pkgs.gitFull;
   };
@@ -185,7 +196,7 @@ programs.git= {
     vim
     piper
     pavucontrol
-    adwaita-icon-theme 
+    adwaita-icon-theme
     wget
     clipboard-jh
     unstable.hyprpicker
@@ -213,6 +224,7 @@ programs.git= {
     ripgrep
     nixd
     lxappearance
+    wtype
     lf
     aseprite
     godot_4
@@ -229,22 +241,28 @@ programs.git= {
     bemoji
     fuzzel
   ];
-  
+
   environment.localBinInPath = true;
 
   # ADD FONTS
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" "DroidSansMono"]; })
+    (nerdfonts.override {
+      fonts = [
+        "JetBrainsMono"
+        "FiraCode"
+        "DroidSansMono"
+      ];
+    })
     roboto
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-   # programs.mtr.enable = true;
-   # programs.gnupg.agent = {
-   #   enable = true;
-   #   enableSSHSupport = true;
-   # };
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
@@ -263,7 +281,7 @@ programs.git= {
     enable = true;
   };
 
-  environment.sessionVariables = {};
+  environment.sessionVariables = { };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
