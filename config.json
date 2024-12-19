@@ -1,12 +1,9 @@
 {
-    "git_repo_dir": "/home/myt/.local/bin/MyToastersDotfiles/",
-    "dotfiles": [
+    "git_repo_dir": "/home/myt/.local/MyToastersDotfiles",
+    "dotfiles":[
         "/etc/nixos/configuration.nix",
         "/home/myt/.config/fish/config.fish",
         "/home/myt/.config/wezterm/wezterm.lua",
-        "/home/myt/.bashrc",
-        "/home/myt/.config/waybar/style.css",
-        "/home/myt/.config/waybar/config.jsonc",
-        "./config.json"
+        "/home/myt/.bashrc"
     ]
 }
