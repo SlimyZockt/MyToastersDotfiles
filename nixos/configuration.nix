@@ -217,7 +217,6 @@ in
     networkmanagerapplet
     blueberry
     udiskie
-    rofi-wayland
     starship
     unzip
     hyprpicker
