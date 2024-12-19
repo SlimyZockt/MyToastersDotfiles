@@ -146,6 +146,7 @@ in
       pnpm
       sqlite
       goose
+      glow
     ];
   };
 
