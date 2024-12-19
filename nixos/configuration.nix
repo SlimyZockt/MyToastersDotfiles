@@ -131,6 +131,7 @@ in {
         discord
         obs-studio
         tailwindcss
+        templ
       ];
   };
 
@@ -221,6 +222,7 @@ programs.git= {
     kdePackages.xwaylandvideobridge
     wl-clipboard
     spotify
+    nixfmt-rfc-style
   ];
   
   environment.localBinInPath = true;
