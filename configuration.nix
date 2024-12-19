@@ -196,7 +196,6 @@ programs.git= {
     grim
     polychromatic
     mako
-    wl-clipboard
     adapta-kde-theme
     adwaita-qt6
     xorg.xcursorthemes
