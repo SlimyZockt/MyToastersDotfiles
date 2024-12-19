@@ -220,13 +220,15 @@ programs.git= {
     kdePackages.qt6ct
     kdePackages.xwaylandvideobridge
     wl-clipboard
+    spotify
   ];
   
   environment.localBinInPath = true;
 
   # ADD FONTS
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" "DroidSansMono" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" "DroidSansMono"]; })
+    roboto
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
