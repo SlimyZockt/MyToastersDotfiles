@@ -226,6 +226,8 @@ programs.git= {
     wl-clipboard
     spotify
     nixfmt-rfc-style
+    bemoji
+    fuzzel
   ];
   
   environment.localBinInPath = true;
