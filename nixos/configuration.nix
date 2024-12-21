@@ -164,7 +164,6 @@ in
       libuchardet
       typescript
       discord
-      obs-studio
       tailwindcss
       templ
       pnpm
@@ -212,12 +211,21 @@ in
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      droidcam-obs
+    ];
+  };
+
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     unstable.neovim
+    unstable.wezterm
+    unstable.hyprpicker
     droidcam
-    obs-studio-plugins.droidcam-obs
-    unstable.brave
+    brave
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     vim
@@ -226,7 +234,6 @@ in
     adwaita-icon-theme
     wget
     clipboard-jh
-    unstable.hyprpicker
     dunst
     yaru-theme
     waybar
@@ -255,7 +262,6 @@ in
     lf
     aseprite
     godot_4
-    unstable.wezterm
     dracula-icon-theme
     fastfetch
     nwg-look
