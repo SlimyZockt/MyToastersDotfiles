@@ -215,7 +215,8 @@ in
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     unstable.neovim
-    v4l-utils
+    droidcam
+    obs-studio-plugins.droidcam-obs
     brave
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
