@@ -286,6 +286,7 @@ in
         "JetBrainsMono"
         "FiraCode"
         "DroidSansMono"
+        "RobotoMono"
       ];
     })
     roboto
