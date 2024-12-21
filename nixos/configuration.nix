@@ -169,7 +169,8 @@ in
       pnpm
       sqlite
       goose
-      glow
+      pandoc
+      texliveTeTeX
     ];
   };
 
