@@ -29,7 +29,20 @@ in
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # Razer keyboards
   hardware.openrazer.enable = true;
+  # Intel Graphics
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      # your Open GL, Vulkan and VAAPI drivers
+      vpl-gpu-rt          # for newer GPUs on NixOS >24.05 or unstable
+      # onevpl-intel-gpu  # for newer GPUs on NixOS <= 24.05
+      # intel-media-sdk   # for older GPUs
+    ];
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -87,9 +100,10 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.devmon.enable = true;
-  services.gvfs.enable = true;
+
+  # Auto Mount
   services.udisks2.enable = true;
+  
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
