@@ -217,7 +217,7 @@ in
     unstable.neovim
     droidcam
     obs-studio-plugins.droidcam-obs
-    brave
+    unstable.brave
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     vim
