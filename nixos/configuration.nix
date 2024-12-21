@@ -239,6 +239,7 @@ in
     adapta-kde-theme
     adwaita-qt6
     xorg.xcursorthemes
+    cheese
     networkmanagerapplet
     blueberry
     udiskie
