@@ -215,6 +215,7 @@ in
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     unstable.neovim
+    v4l-utils
     brave
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
