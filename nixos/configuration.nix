@@ -171,6 +171,7 @@ in
       goose
       pandoc
       texliveTeTeX
+      python312Packages.grip
     ];
   };
 
