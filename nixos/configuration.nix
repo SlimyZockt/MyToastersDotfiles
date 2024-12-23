@@ -171,6 +171,7 @@ in
       goose
       pandoc
       texliveTeTeX
+      typora
       obsidian
     ];
   };
