@@ -229,6 +229,7 @@ in
     unstable.hyprpicker
     droidcam
     brave
+    ffmpeg
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     vim
