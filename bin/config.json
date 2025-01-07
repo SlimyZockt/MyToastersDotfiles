@@ -8,6 +8,7 @@
         "/home/myt/.config/waybar/style.css",
         "/home/myt/.config/waybar/config.jsonc",
         "/home/myt/.config/fuzzel/fuzzel.ini",
+        "/home/myt/.config/hypr/hyprpaper.conf",
         "/home/myt/.config/hypr/hyprland.conf",
         "/home/myt/.local/bin/config.json"
     ]
