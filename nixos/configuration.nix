@@ -163,7 +163,7 @@ in
       vscode
       libuchardet
       typescript
-      discord
+      webcord
       tailwindcss
       templ
       pnpm
