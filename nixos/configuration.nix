@@ -242,9 +242,7 @@ in
     yaru-theme
     waybar
     hyprpolkitagent
-    swww
     slurp
-    mpvpaper
     networkmanagerapplet
     grim
     polychromatic
@@ -252,13 +250,11 @@ in
     adapta-kde-theme
     adwaita-qt6
     xorg.xcursorthemes
-    cheese
     networkmanagerapplet
-    blueberry
     udiskie
+    hyprpaper
     starship
     unzip
-    hyprpicker
     ripgrep
     nixd
     lxappearance
@@ -288,7 +284,6 @@ in
         "JetBrainsMono"
         "FiraCode"
         "DroidSansMono"
-        "RobotoMono"
       ];
     })
     roboto
@@ -303,7 +298,7 @@ in
   # };
 
   # List services that you want to enable:
-
+  services.blueman.enable = true;
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   security.polkit.enable = true;
