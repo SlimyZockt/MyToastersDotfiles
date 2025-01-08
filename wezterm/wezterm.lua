@@ -13,6 +13,7 @@ if wezterm.target_triple:find("linux") ~= nil then
 	config.enable_wayland = false
 	config.front_end = "WebGpu"
 	config.default_prog = { "fish" }
+	config.enable_tab_bar = false
 end
 config.automatically_reload_config = true
 -- For example, changing the color scheme:

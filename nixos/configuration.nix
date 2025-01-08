@@ -164,6 +164,7 @@ in
       libuchardet
       typescript
       webcord
+      discord
       tailwindcss
       templ
       pnpm
@@ -173,6 +174,7 @@ in
       texliveTeTeX
       typora
       obsidian
+      pasystray
     ];
   };
 
@@ -224,10 +226,11 @@ in
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    unstable.neovim
+    unstable.nixd
     unstable.wezterm
     unstable.hyprpicker
     droidcam
+    neovim
     brave
     ffmpeg
     xdg-desktop-portal
@@ -256,7 +259,6 @@ in
     starship
     unzip
     ripgrep
-    nixd
     lxappearance
     wtype
     lf
