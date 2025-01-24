@@ -147,6 +147,8 @@ in
     ];
     packages = with pkgs; [
       localsend
+      playerctl
+      feh
       tmux
       gcc
       nodejs_20
