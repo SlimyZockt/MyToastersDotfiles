@@ -147,7 +147,6 @@ in
     ];
     packages = with pkgs; [
       localsend
-      ags
       tmux
       gcc
       nodejs_20
