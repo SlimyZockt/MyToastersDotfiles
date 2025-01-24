@@ -147,7 +147,6 @@ in
     ];
     packages = with pkgs; [
       nixd
-      ags
       localsend
       playerctl
       feh
