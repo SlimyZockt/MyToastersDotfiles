@@ -146,6 +146,7 @@ in
       "docker"
     ];
     packages = with pkgs; [
+      ags
       localsend
       playerctl
       feh
@@ -231,7 +232,6 @@ in
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    unstable.nixd
     unstable.wezterm
     unstable.hyprpicker
     droidcam
