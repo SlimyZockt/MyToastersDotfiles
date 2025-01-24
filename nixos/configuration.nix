@@ -146,6 +146,7 @@ in
       "docker"
     ];
     packages = with pkgs; [
+      nixd
       ags
       localsend
       playerctl

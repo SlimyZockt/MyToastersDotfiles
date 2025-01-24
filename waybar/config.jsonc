@@ -3,7 +3,7 @@
     "layer": "top",
     "position": "top",
     "modules-left": [
-        "sway/workspaces",
+        "hyperland/workspaces",
         "custom/right-arrow-dark"
     ],
     "modules-center": [
