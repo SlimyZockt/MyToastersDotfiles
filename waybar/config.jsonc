@@ -3,12 +3,12 @@
     "position": "top",
     "modules-left": [
         "hyprland/workspaces",
-        "mpris",
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
+        "mpris",
         "pulseaudio",
         "backlight",
         "memory",
@@ -97,11 +97,10 @@
         "path": "/"
     },
     "mpris": {
-        "format": " : {player_icon} {title}",
-        "format-paused": " : {status_icon} <i>{title}</i>",
+        "format": "{player_icon} {title:10}",
+        "format-paused": "{status_icon} <i>{title}</i>",
         "player-icons": {
             "default": "󰐊",
-            "mpv": " "
         },
         "status-icons": {
             "paused": "󰏤"
