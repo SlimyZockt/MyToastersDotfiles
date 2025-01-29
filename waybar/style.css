@@ -25,6 +25,8 @@ window#waybar {
 	padding-left: 0.5rem;
 }
 
+#mpris {}
+
 #workspaces button {
 	color: @main-color;
 	background: @second-color;
