@@ -28,7 +28,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " 0% ",
+        "format-muted": " 0% ",
         "format-icons": {
             "headphones": "",
             "default": [
@@ -101,15 +101,14 @@
         "path": "/"
     },
     "mpris": {
-        "format": "{player_icon} {title}",
-        "format-paused": "{status_icon} <i>{title}</i>",
+        "format": " {player_icon}  {title}",
+        "format-paused": " {status_icon}  <i>{title}</i>",
         "player-icons": {
-            "default": "󰐊",
+            "default": "",
         },
         "status-icons": {
-            "paused": "󰏤"
+            "paused": ""
         },
-        // "ignored-players": ["firefox"]
     },
     "tray": {
         "icon-size": 20
