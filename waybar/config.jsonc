@@ -104,11 +104,11 @@
         "format": " {player_icon}  {title}",
         "format-paused": " {status_icon}  <i>{title}</i>",
         "player-icons": {
-            "default": "",
+            "default": "",
         },
         "status-icons": {
-            "paused": ""
-        },
+            "paused": ""
+        }
     },
     "tray": {
         "icon-size": 20
