@@ -2,8 +2,10 @@
     "git_repo_dir": "/home/myt/.local/bin/MyToastersDotfiles/",
     "dotfiles": [
         "/home/myt/.config/fish/config.fish",
+        "/home/myt/.config/fish/key-bindings.fish",
         "/home/myt/.config/wezterm/wezterm.lua",
         "/home/myt/.bashrc",
+        "/home/myt/.config/tmux/tmux.conf",
         "/home/myt/.config/waybar/style.css",
         "/home/myt/.config/waybar/config.jsonc",
         "/home/myt/.config/fuzzel/fuzzel.ini",
