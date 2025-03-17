@@ -1,8 +1,12 @@
 if status is-interactive
-    set -g fish_key_bindings fish_vi_key_bindings
+    # Commands to run in interactive sessions can go here
     set fish_greeting ""
-        # Commands to run in interactive sessions can go here
-    starship init fish | source
+    set -g fish_key_bindings fish_vi_key_bindings
     set SSH_ASKPASS ""
+    starship init fish | source
     fastfetch
+end
+
+function fish_user_key_bindings
+    bind -a \cf 'tms'
 end
