@@ -5,7 +5,7 @@ local wezterm = require("wezterm")
 local config = {}
 -- This is where you actually apply your config choices
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.9
 if wezterm.target_triple:find("windows") ~= nil then
 	config.default_prog = { "pwsh", "-NoLogo" }
 end
