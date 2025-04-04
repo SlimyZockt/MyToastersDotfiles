@@ -1,4 +1,5 @@
 {
+
     "layer": "top",
     "position": "top",
     "modules-left": [
@@ -22,7 +23,7 @@
         "format": "{name}"
     },
     "clock": {
-        "format": "{:%a %H:%M %m-%d}",
+        "format": "{:%a %H:%M %d-%m}",
         "tooltip": false
     },
     "pulseaudio": {
