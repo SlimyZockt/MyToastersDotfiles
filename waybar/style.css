@@ -1,35 +1,36 @@
-@define-color main-color #DCD7BA;
-@define-color second-color #1F1F28;
-@define-color darker-second-color #181820;
+@define-color main-color #C8C093;
+@define-color second-color #1A1818;
+@define-color darker-second-color #0D0C0C;
 
 * {
-	font-size: 1rem;
 	font-family: JetBrainsMono Nerd Font;
+	min-height: 0px;
 }
+
+
 
 window#waybar {
-	background: @second-color;
+	font-size: 16px;
+	background: rgba(26, 24, 14, 0.8);
 	color: @main-color;
+	border: solid 3px @main-color;
+	border-radius: 8px;
 }
 
-#clock,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#mpris,
-#backlight,
+
+button {
+	color: @main-color;
+	padding: 0;
+	margin: 0;
+	border-radius: 0px;
+}
+
+#workspaces {
+	margin: 10px 0px 10px 10px; 
+}
+
 #tray {
-	padding-right: 0.5rem;
-	padding-left: 0.5rem;
-}
-
-#mpris {}
-
-#workspaces button {
-	color: @main-color;
-	background: @second-color;
+	margin: 10px 10px 10px 0px; 
 }
 
 #workspaces button:hover {

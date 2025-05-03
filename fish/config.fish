@@ -2,6 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_greeting ""
     set -x PATH "/home/myt/.cargo/bin" $PATH
+    set -x PATH "/home/myt/go/bin" $PATH
     set -x PATH "/home/myt/.local/bin" $PATH
     set -g fish_key_bindings fish_vi_key_bindings
     set SSH_ASKPASS ""
@@ -15,3 +16,10 @@ end
 function fish_user_key_bindings
     bind -a \cf 'tms'
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/myt/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

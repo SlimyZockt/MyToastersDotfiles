@@ -2,13 +2,12 @@
 local wezterm = require("wezterm")
 
 -- This will hold the configuration.
-local config = {}
--- This is where you actually apply your config choices
-config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.window_background_opacity = 1.0
-if wezterm.target_triple:find("windows") ~= nil then
-	config.default_prog = { "pwsh", "-NoLogo" }
-end
+--- @type Config
+local config = {
+	font = wezterm.font("JetBrainsMono Nerd Font"),
+	window_background_opacity = 1.0,
+}
+
 if wezterm.target_triple:find("linux") ~= nil then
 	config.enable_wayland = false
 	config.front_end = "WebGpu"

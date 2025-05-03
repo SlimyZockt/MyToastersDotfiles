@@ -2,6 +2,9 @@
 
     "layer": "top",
     "position": "top",
+    "reload_style_on_change": true,
+    "margin": "8",
+    "spacing": 8,
     "modules-left": [
         "hyprland/workspaces",
         "mpris",
@@ -18,6 +21,10 @@
         "battery",
         "tray",
     ],
+    "custom/blank": {
+        "format": " ",
+        "tooltip": false
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "format": "{name}"
