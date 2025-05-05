@@ -1,6 +1,7 @@
 {
     "git_repo_dir": "/home/myt/.local/bin/MyToastersDotfiles/",
     "dotfiles": [
+        "/home/myt/.config/ghostty/config",
         "/home/myt/.config/fish/config.fish",
         "/home/myt/.config/fish/key-bindings.fish",
         "/home/myt/.config/wezterm/wezterm.lua",
