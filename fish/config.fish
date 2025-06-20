@@ -1,4 +1,5 @@
-complete -c dot-tool -l output -a '~/.config/DotTool/'
+complete -c dot-tool -a '~/.config/DotTool/'
+abbr --add dt dot-tool '~/.config/DotTool/'
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
