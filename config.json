@@ -1,1 +1,16 @@
-{"git_repo_dir":"","dotfiles":null}
+{
+    "dotfiles": [
+        "/home/myt/.config/ghostty/config",
+        "/home/myt/.config/fish/config.fish",
+        "/home/myt/.config/fish/key-bindings.fish",
+        "/home/myt/.config/wezterm/wezterm.lua",
+        "/home/myt/.bashrc",
+        "/home/myt/.config/tmux/tmux.conf",
+        "/home/myt/.config/waybar/style.css",
+        "/home/myt/.config/waybar/config.jsonc",
+        "/home/myt/.config/fuzzel/fuzzel.ini",
+        "/home/myt/.config/hypr/hyprpaper.conf",
+        "/home/myt/.config/hypr/hyprland.conf",
+        "/home/myt/.local/bin/config.json"
+    ]
+}
