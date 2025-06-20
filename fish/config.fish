@@ -1,4 +1,3 @@
-complete -c dot-tool -a '~/.config/DotTool/'
 abbr --add dt dot-tool '~/.config/DotTool/'
 
 if status is-interactive
