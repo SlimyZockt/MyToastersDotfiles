@@ -4,13 +4,12 @@
 
 * {
 	font-family: JetBrainsMono Nerd Font;
-	min-height: 0px;
+	font-size: 16px;
 	/* border: solid 3px @main-color; */
 	/* border-radius: 8px; */
 }
 
 window#waybar {
-	font-size: 16px;
 	color: @main-color;
 	background: linear-gradient(to bottom, rgba(30, 30, 30, 0.1), rgba(50, 50, 50, 0.1));
 	border-radius: 8px; 
@@ -19,13 +18,11 @@ window#waybar {
 
 button {
 	color: @main-color;
-	padding: 0;
-	margin: 0;
-	border-radius: 0px;
-}
-
-#workspaces {
-	margin: 10px 0px 10px 10px; 
+	padding: 0 0 0 0;
+	margin-right: 2px;
+	border-radius: 2px;
+	min-width: 22px;
+	min-height: 22px;
 }
 
 #tray {
@@ -37,7 +34,6 @@ button {
 	text-shadow: inherit;
 	background: @darker-second-color;
 }
-
 
 #workspaces button.active {
 	background: @main-color;
