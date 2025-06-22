@@ -4,25 +4,28 @@
 
 * {
 	font-family: JetBrainsMono Nerd Font;
-	font-size: 16px;
-	/* border: solid 3px @main-color; */
-	/* border-radius: 8px; */
+	min-height: 0px;
 }
 
 window#waybar {
+	font-size: 16px;
 	color: @main-color;
 	background: linear-gradient(to bottom, rgba(30, 30, 30, 0.1), rgba(50, 50, 50, 0.1));
-	border-radius: 8px; 
-	border: 1px solid rgba(255, 255, 255, 0.2); 
+	border-radius: 8px; /* Optional: Soften corners for a modern look */
+	 border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Subtle border */
 }
 
 button {
 	color: @main-color;
-	padding: 0 0 0 0;
 	margin-right: 2px;
+	padding: 0;
 	border-radius: 2px;
-	min-width: 22px;
-	min-height: 22px;
+	/* min-width: 22px; */
+	/* min-height: 22px; */
+}
+
+#workspaces {
+	margin: 10px 0px 10px 10px; 
 }
 
 #tray {
@@ -34,6 +37,7 @@ button {
 	text-shadow: inherit;
 	background: @darker-second-color;
 }
+
 
 #workspaces button.active {
 	background: @main-color;
