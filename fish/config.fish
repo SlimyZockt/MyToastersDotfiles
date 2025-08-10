@@ -10,7 +10,7 @@ if status is-interactive
     set SSH_ASKPASS ""
     starship init fish | source
     fzf --fish | source
-    niri completions fish | source
+ niri completions fish | source
     set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
     carapace _carapace | source
     fastfetch

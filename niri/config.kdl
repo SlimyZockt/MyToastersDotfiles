@@ -81,18 +81,18 @@ output "DP-3" {
     // off
     mode "1920x1080@120.000"
     scale 1
-    transform "normal"
-    position x=0 y=0
+    transform "90"
+    position x=1920 y=-650
     variable-refresh-rate
 }
 
 output "HDMI-A-1" {
     // off
-    mode "1920x1080@60.000"
+    mode "1920x1080@143.981"
     variable-refresh-rate
     scale 1
-    transform "90"
-    position x=1920 y=-650
+    transform "normal"
+    position x=0 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -288,7 +288,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.25
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -351,8 +351,9 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+B hotkey-overlay-title="Open Brave" { spawn "brave"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+E hotkey-overlay-title="Run an Explorer: fuzzel" { spawn "nautilus"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel" "-D" "yes"; }
+    Mod+E hotkey-overlay-title="Run an Explorer: nautilus" { spawn "nautilus"; }
+    Mod+Shift+Period hotkey-overlay-title="Paste an Emoji: bemoji" { spawn "bemoji"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
