@@ -12,7 +12,7 @@ window#waybar {
 	color: @main-color;
 	background: linear-gradient(to bottom, rgba(30, 30, 30, 0.1), rgba(50, 50, 50, 0.1));
 	border-radius: 8px; /* Optional: Soften corners for a modern look */
-	 border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Subtle border */
+	border: 2px solid rgba(255, 255, 255, 0.2); /* Optional: Subtle border */
 }
 
 button {

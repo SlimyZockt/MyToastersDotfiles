@@ -1,22 +1,23 @@
-abbr --add dt dot-tool '~/.config/DotTool/'
-
 if status is-interactive
+    abbr --add dt dot-tool '~/.config/MyToastersDotfiles/'
     # Commands to run in interactive sessions can go here
     set fish_greeting ""
     set -x PATH "/home/myt/.cargo/bin" $PATH
     set -x PATH "/home/myt/go/bin" $PATH
     set -x PATH "/home/myt/.local/bin" $PATH
+    # set -x PATH "/home/myt/.local/bin/nvim-linux-x86_64/bin" $PATH
     set -g fish_key_bindings fish_vi_key_bindings
     set SSH_ASKPASS ""
+    set -Ux MANPAGER "nvim +Man!"
+    set -Ux EDITOR "nvim"
+    set -Ux VISUAL "nvim"
+    set -Ux JJ_EDITOR "nvim"
+    set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
     starship init fish | source
     fzf --fish | source
-    set SSH_ASKPASS ""
-    set -Ux MANPAGER "nvim +Man!"
-    set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
     carapace _carapace | source
     fastfetch
-    set NIX_LD $(nix eval --impure --raw --expr '
-let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD ')
+    alias vim nvim
 end
 
 function fish_user_key_bindings

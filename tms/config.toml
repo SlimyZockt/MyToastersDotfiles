@@ -1,0 +1,12 @@
+bookmarks = [
+    "/home/myt/.config",
+    "/home/myt/.config/fish",
+    "/home/myt/.config/tmux",
+    "/home/myt/.config/nvim",
+    "/home/myt/.config/niri",
+    "/home/myt/vimwiki",
+]
+
+[[search_dirs]]
+path = "/home/myt/Documents"
+depth = 10
