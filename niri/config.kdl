@@ -261,6 +261,7 @@ spawn-at-startup "nm-applet --no-agent"
 
 environment {
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    BEMOJI_PICKER_CMD "fuzzel -d"
 }
 
 hotkey-overlay {
@@ -359,6 +360,7 @@ binds {
     Mod+M repeat=false hotkey-overlay-title="Open Gmail" { spawn "brave" "--app=https://mail.google.com"; }
     Mod+A repeat=false hotkey-overlay-title="Open AI Chat" { spawn "brave" "--app=https://t3.chat"; }
 
+    Mod+Shift+T repeat=false hotkey-overlay-title="Extract Text form Screenshot" { spawn "bash" "-c" "grim -g \"$(slurp)\" - | tesseract stdin stdout | wl-copy"; }
     Mod+Shift+Period repeat=false hotkey-overlay-title="Paste an Emoji: bemoji" { spawn "bemoji" "-t"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
@@ -577,8 +579,6 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Mod+Shift+C { spawn "hyprpicker" "-ar"; }
-    Mod+Shift+T { spawn "~/.local/bin/text_de.sh"; } 
-    Mod+Ctrl+T { spawn "~/.local/bin/text.sh"; } 
 
     Mod+Shift+S { screenshot; }
     Mod+Ctrl+S { screenshot-screen; }
