@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BASH_DIR = $(dirname "$(realpath $0)")
-pushd BASH_DIR
+pushd $BASH_DIR
 
 if [ $# -eq 0 ]
   then
