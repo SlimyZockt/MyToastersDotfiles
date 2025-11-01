@@ -22,6 +22,9 @@ end
 
 function fish_user_key_bindings
     bind -a \cf 'tms'
+    bind yy fish_clipboard_copy
+    bind Y fish_clipboard_copy
+    bind P fish_clipboard_pase
 end
 
 # pnpm
