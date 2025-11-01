@@ -3,6 +3,8 @@
 BASH_DIR=$(dirname "$(realpath $0)")
 pushd $BASH_DIR
 
+echo $BASH_DIR
+
 if [ $# -eq 0 ]
   then
     echo "No arguments supplied"
