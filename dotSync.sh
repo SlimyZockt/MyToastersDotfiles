@@ -19,9 +19,7 @@ dotfiles=(
 for i in "${dotfiles[@]}"
 do
     rm -rf ./"$i"
-    cp 
     cp -r "$BASH_DIR"/"$i" .
-
 done
 
 popd
