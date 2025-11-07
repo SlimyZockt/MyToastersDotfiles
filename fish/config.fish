@@ -1,5 +1,4 @@
 if status is-interactive
-    abbr --add dt dot-tool '~/.config/MyToastersDotfiles/'
     # Commands to run in interactive sessions can go here
     set fish_greeting ""
     set -x PATH "/home/myt/.cargo/bin" $PATH
