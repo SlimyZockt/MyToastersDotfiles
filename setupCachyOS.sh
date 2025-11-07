@@ -30,9 +30,8 @@ BASE_PACKAGES=(
     carapace
     fastfetch
     legcord-bin
-    libadwaita-without-adwaita
     ttf-jetbrains-mono-nerd
-    ttf-ms-win11-auto
+    ttf-ms-win10-auto
 )
 
 GAMING_PACKAGES=(
@@ -77,7 +76,7 @@ echo -e "[MYT] Updating system...${NC}"
 paru -Syu --noconfirm 
 
 echo -e "[MYT] Installing base packages...${NC}"
-paru -S --needed --noconfirm "${SYSTEM_PACKAGES[@]}"
+paru -S --needed --noconfirm "${BASE_PACKAGES[@]}"
 
 echo -e "[MYT] Installing programming packages...${NC}"
 paru -S --needed --noconfirm "${PROGRAMMING_PACKAGES[@]}"
