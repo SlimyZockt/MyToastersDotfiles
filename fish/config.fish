@@ -1,5 +1,4 @@
 if status is-interactive
-    abbr --add dt dot-tool '~/.config/MyToastersDotfiles/'
     # Commands to run in interactive sessions can go here
     set fish_greeting ""
     set -x PATH "/home/myt/.cargo/bin" $PATH
@@ -13,6 +12,10 @@ if status is-interactive
     set -Ux VISUAL "nvim"
     set -Ux JJ_EDITOR "nvim"
     set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+
+    set -gx LDFLAGS "-L/usr/lib/llvm20/lib"
+    set -gx CPPFLAGS "-I/usr/lib/llvm20/include"
+
     starship init fish | source
     fzf --fish | source
     carapace _carapace | source
