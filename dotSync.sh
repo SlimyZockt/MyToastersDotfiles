@@ -15,6 +15,7 @@ dotfiles=(
 "gtk-4.0"
 "gtk-3.0"
 "tmux"
+"mako"
 )
 
 for i in "${dotfiles[@]}"
