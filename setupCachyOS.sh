@@ -83,3 +83,14 @@ paru -S --needed --noconfirm "${PROGRAMMING_PACKAGES[@]}"
 
 echo -e "[MYT] Installing gaming packages...${NC}"
 paru -S --needed --noconfirm "${GAMING_PACKAGES[@]}"
+
+
+mkdir -p ~/.local/bin/
+mkdir -p ~/Video/Camera
+mkdir -p ~/Video/Markers
+
+cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P
+
+cp ./marker.sh ~/.local/bin/.
+cp ./cam.sh ~/.local/bin/.
+
