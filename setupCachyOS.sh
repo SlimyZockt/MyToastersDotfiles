@@ -32,6 +32,10 @@ BASE_PACKAGES=(
     legcord-bin
     ttf-jetbrains-mono-nerd
     ttf-ms-win10-auto
+    gpu-screen-recorder
+    brightnessctl
+    noctalia-shell
+    ddcutil
 )
 
 GAMING_PACKAGES=(

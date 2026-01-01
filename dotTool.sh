@@ -22,6 +22,7 @@ dotfiles=(
 "gtk-4.0"
 "gtk-3.0"
 "mako"
+"noctalia"
 )
 
 for i in "${dotfiles[@]}"

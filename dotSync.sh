@@ -16,6 +16,7 @@ dotfiles=(
 "gtk-3.0"
 "tmux"
 "mako"
+"noctalia"
 )
 
 for i in "${dotfiles[@]}"
