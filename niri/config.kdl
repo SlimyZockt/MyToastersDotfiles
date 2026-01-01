@@ -254,19 +254,20 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-// spawn-at-startup "waybar"
 // spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "qs" "-c" "noctalia-shell"
+
 spawn-at-startup "ghostty"
 spawn-at-startup "brave"
 spawn-at-startup "hyprpaper"
-spawn-at-startup "nm-applet --no-agent"
-spawn-at-startup "wl-clip-persist --clipboard regular"
+spawn-at-startup "nm-applet" "--no-agent"
+spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 
 
 environment {
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
     BEMOJI_PICKER_CMD "fuzzel -d"
-    QT_QPA_PLATFORM "wayland,xcb"
+    QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "gtk3"
 }
 

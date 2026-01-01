@@ -25,4 +25,12 @@ layout {
     insert-hint {
         color "#aaaaaa80"
     }
+
 }
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
