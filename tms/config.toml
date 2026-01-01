@@ -5,6 +5,7 @@ bookmarks = [
     "/home/myt/.config/nvim",
     "/home/myt/.config/niri",
     "/home/myt/vimwiki",
+    "/home/myt/.config/MyToastersDotfiles",
 ]
 
 [[search_dirs]]

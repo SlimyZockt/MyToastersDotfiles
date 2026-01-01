@@ -20,9 +20,21 @@
         "pulseaudio",
         "battery",
         "tray",
+        "niri/language",
+        "custom/power"
+        // "custom/blank",
     ],
+    "niri/language": {
+        "format": "{short}",
+        "on-click": "niri msg action switch-layout next" 
+    },
     "custom/blank": {
         "format": " ",
+        "tooltip": false
+    },
+    "custom/power": {
+        "format": "󰐥 ",
+        "on-click": "systemctl poweroff",
         "tooltip": false
     },
     "niri/workspaces": {

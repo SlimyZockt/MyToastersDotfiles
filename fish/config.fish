@@ -19,8 +19,10 @@ if status is-interactive
     starship init fish | source
     fzf --fish | source
     carapace _carapace | source
+    obs-cmd completion fish | source
     fastfetch
     alias vim nvim
+    alias camera "/home/myt/.config/MyToastersDotfiles/camera.sh"
 end
 
 function fish_user_key_bindings

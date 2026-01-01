@@ -25,11 +25,7 @@ button {
 }
 
 #workspaces {
-	margin: 10px 0px 10px 10px; 
-}
-
-#tray {
-	margin: 10px 10px 10px 0px; 
+	margin: 10px 10px 10px 10px; 
 }
 
 #workspaces button:hover {

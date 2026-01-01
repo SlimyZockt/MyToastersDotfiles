@@ -85,15 +85,14 @@ output "DP-2" {
     mode "1920x1080@144"
     variable-refresh-rate
     scale 1
-    transform "normal"
-    position x=0 y=0
+    position x=-1920 y=260
 }
 
 output "DP-3" {
     // off
-    mode "1920x1080@120.000"
-    scale 1
-    position x=-1920 y=30
+    mode "2560x1440@280"
+    scale 1.20
+    position x=0 y=0
     variable-refresh-rate
 }
 
@@ -269,6 +268,7 @@ spawn-at-startup "wl-clip-persist --clipboard regular"
 environment {
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
     BEMOJI_PICKER_CMD "fuzzel -d"
+    QT_QPA_PLATFORM "wayland"
 }
 
 hotkey-overlay {
@@ -369,6 +369,14 @@ binds {
 
     Mod+Shift+T repeat=false hotkey-overlay-title="Extract Text form Screenshot" { spawn "bash" "-c" "grim -g \"$(slurp)\" - | tesseract stdin stdout | wl-copy"; }
     Mod+Shift+Period repeat=false hotkey-overlay-title="Paste an Emoji: bemoji" { spawn "bemoji" "-t"; }
+
+    // obs
+    Mod+Y { spawn "~/.local/bin/marker.sh"; }
+    Mod+F1 { spawn "obs-cmd" "recording" "toggle"; }
+    Mod+F2 { spawn "~/.local/bin/cam.sh"; }
+    Mod+F3 { spawn "obs-cmd" "scene" "switch" "main_display"; }
+    Mod+F4 { spawn "obs-cmd" "scene" "switch" "camera_fullscreen"; }
+
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
