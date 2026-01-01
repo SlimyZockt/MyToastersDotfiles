@@ -259,7 +259,6 @@ layout {
 spawn-at-startup "ghostty"
 spawn-at-startup "brave"
 spawn-at-startup "hyprpaper"
-// spawn-at-startup "waybar"
 spawn-at-startup "nm-applet --no-agent"
 spawn-at-startup "wl-clip-persist --clipboard regular"
 
@@ -267,7 +266,8 @@ spawn-at-startup "wl-clip-persist --clipboard regular"
 environment {
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
     BEMOJI_PICKER_CMD "fuzzel -d"
-    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORM "wayland,xcb"
+    QT_QPA_PLATFORMTHEME "gtk3"
 }
 
 hotkey-overlay {
