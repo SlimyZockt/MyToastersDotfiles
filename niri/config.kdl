@@ -201,7 +201,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -256,7 +256,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
-
+spawn-at-startup "wayvid-gui"
 spawn-at-startup "ghostty"
 spawn-at-startup "brave"
 spawn-at-startup "hyprpaper"
