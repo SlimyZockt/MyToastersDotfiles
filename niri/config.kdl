@@ -256,7 +256,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "wayvid-gui"
+// spawn-at-startup "wayvid-gui" "--minimized"
 spawn-at-startup "ghostty"
 spawn-at-startup "brave"
 spawn-at-startup "hyprpaper"
@@ -374,8 +374,8 @@ binds {
     Mod+Y { spawn "~/.local/bin/marker.sh"; }
     Mod+F1 { spawn "obs-cmd" "recording" "toggle"; }
     Mod+F2 { spawn "~/.local/bin/cam.sh"; }
-    Mod+F3 { spawn "obs-cmd" "scene" "switch" "main_display"; }
-    Mod+F4 { spawn "obs-cmd" "scene" "switch" "camera_fullscreen"; }
+    Mod+F3 { spawn "obs-cmd" "scene" "switch" "desktop"; }
+    Mod+F4 { spawn "obs-cmd" "scene" "switch" "camera"; }
 
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

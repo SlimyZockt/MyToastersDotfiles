@@ -1,7 +1,6 @@
 #!/bin/bash
-MARKER_DIR="$HOME/Videos/Markers"
-SELECTED=$(ls "$MARKER_DIR" | fuzzel -d --prompt="Marker File: ")
+SELECTED=$(fuzzel -d --prompt="Marker: ")
 
 if [ -n "$SELECTED" ]; then
-    /home/myt/.local/bin/MarkTool "$MARKER_DIR/$SELECTED"
+    obs-cmd recording create-chapter "$SELECTED"
 fi
