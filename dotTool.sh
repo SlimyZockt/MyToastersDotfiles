@@ -6,9 +6,6 @@ pushd $BASH_DIR
 
 echo $BASH_DIR
 
-# if [ $# -eq 0 ]; then
-#     echo "No arguments supplied"
-# fi
 dotfiles=(
 "niri"
 "hypr"
@@ -25,15 +22,12 @@ dotfiles=(
 )
 
 for i in "${dotfiles[@]}"; do 
-    # rm -rf ./"$i"
-    # cp -r ~/.config/"$i" .
-    echo "$BASH_DIR/$i"
+    rm -rf ./"$i"
+    cp -r ~/.config/"$i" .
 done
 
-echo "finished"
-
-# rm -f  $BASH_DIR/tmux/tmux.conf
-# cp -r  $HOME/.config/tmux/tmux.conf ./tmux/tmux.conf
+rm -f  $BASH_DIR/tmux/tmux.conf
+cp -r  $HOME/.config/tmux/tmux.conf ./tmux/tmux.conf
 
 git add .
 git commit -am "$(($(git log -1 --pretty=%B)+1))"
