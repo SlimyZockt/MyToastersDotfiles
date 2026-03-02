@@ -256,19 +256,19 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
-// spawn-at-startup "wayvid-gui" "--minimized"
+// spawn-sh-at-startup "sleep 2 10 && wayvid-ctl apply ~/Videos/wallpapers/ps3xmbwave.webm"
 spawn-at-startup "ghostty"
 spawn-at-startup "brave"
 spawn-at-startup "hyprpaper"
 spawn-at-startup "nm-applet" "--no-agent"
 spawn-at-startup "wl-clip-persist" "--clipboard" "regular"
 
-
 environment {
     // ELECTRON_OZONE_PLATFORM_HINT "wayland"
     BEMOJI_PICKER_CMD "fuzzel -d"
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "gtk3"
+    // GTK_THEME "Kanagawa-Pink-Dark-Dragon"
 }
 
 hotkey-overlay {
@@ -343,6 +343,11 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    match title="CultLtd."
+    open-floating false
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -365,7 +370,7 @@ binds {
     Mod+E repeat=false hotkey-overlay-title="Run an Explorer: nautilus" { spawn "nautilus"; }
     Mod+S repeat=false hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
     Mod+M repeat=false hotkey-overlay-title="Open Gmail" { spawn "brave" "--app=https://mail.google.com"; }
-    Mod+A repeat=false hotkey-overlay-title="Open AI Chat" { spawn "brave" "--app=https://t3.chat"; }
+    Mod+P repeat=false hotkey-overlay-title="Open Project creator" { spawn "~/.local/bin/project_create.sh"; }
 
     Mod+Shift+T repeat=false hotkey-overlay-title="Extract Text form Screenshot" { spawn "bash" "-c" "grim -g \"$(slurp)\" - | tesseract stdin stdout | wl-copy"; }
     Mod+Shift+Period repeat=false hotkey-overlay-title="Paste an Emoji: bemoji" { spawn "bemoji" "-t"; }
@@ -620,4 +625,11 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
 include "./noctalia.kdl"
+

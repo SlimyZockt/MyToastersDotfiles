@@ -22,6 +22,7 @@ if status is-interactive
     obs-cmd completion fish | source
     fastfetch
     alias vim nvim
+    alias gw 'QT_QPA_PLATFORM="xcb" LD_LIBRARY_PATH=/opt/gowin-eda-edu-ide/lib gw_ide'
     alias camera "/home/myt/.config/MyToastersDotfiles/camera.sh"
 end
 
