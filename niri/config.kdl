@@ -254,7 +254,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-// spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 // spawn-sh-at-startup "sleep 2 10 && wayvid-ctl apply ~/Videos/wallpapers/ps3xmbwave.webm"
 spawn-at-startup "ghostty"
